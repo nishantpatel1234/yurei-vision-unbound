@@ -1,0 +1,70 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "text": "The void doesn't consume you. It reveals who you've always been.",
+      "commentary": "We fear emptiness because it strips away our illusions. But in that stripping lies truth—raw, unfiltered, and undeniable.",
+      "inspiration": "Nietzsche",
+      "position": [2, 1, -3]
+    },
+    {
+      "id": 2,
+      "text": "Chaos is not the enemy of order. It is the womb from which all order is born.",
+      "commentary": "Every structure, every system, every belief—all emerged from primordial chaos. To reject chaos is to reject creation itself.",
+      "inspiration": "Stoicism",
+      "position": [-3, -1, -2]
+    },
+    {
+      "id": 3,
+      "text": "The mind is a prison only when you forget you hold the key.",
+      "commentary": "We construct elaborate cages of thought, then wonder why we feel trapped. Liberation begins with recognizing our own hand in our captivity.",
+      "inspiration": "Buddhism",
+      "position": [1, -2, -4]
+    },
+    {
+      "id": 4,
+      "text": "To understand darkness, one must first cease running from it.",
+      "commentary": "Light and shadow are not opposites—they are partners in the dance of existence. Only by embracing both do we see clearly.",
+      "inspiration": "Carl Jung",
+      "position": [-2, 2, -5]
+    },
+    {
+      "id": 5,
+      "text": "Every truth you hold dear is one perspective away from being a lie.",
+      "commentary": "Certainty is the death of wisdom. The moment we believe we know everything, we stop learning anything.",
+      "inspiration": "Socrates",
+      "position": [3, 0, -3]
+    },
+    {
+      "id": 6,
+      "text": "Power isn't in dominating others. It's in mastering yourself.",
+      "commentary": "The greatest conquest is not of lands or people, but of one's own impulses, fears, and limitations.",
+      "inspiration": "Marcus Aurelius",
+      "position": [0, 3, -6]
+    }
+  ],
+  "hiddenQuotes": [
+    {
+      "id": 101,
+      "text": "Silence speaks louder than screams to those who know how to listen.",
+      "commentary": "In a world of noise, the deepest truths whisper. Only those who cultivate stillness can hear them.",
+      "inspiration": "Lao Tzu"
+    },
+    {
+      "id": 102,
+      "text": "The paradox of freedom: we're most free when we accept our chains.",
+      "commentary": "True liberation doesn't come from breaking every constraint, but from choosing which ones to embrace.",
+      "inspiration": "Existentialism"
+    }
+  ],
+  "paradoxes": [
+    "The more you seek happiness, the more it eludes you.",
+    "To know yourself is to realize you never can.",
+    "The strongest walls are built from the softest beliefs.",
+    "We fear death yet waste the life we have.",
+    "The truth will set you free, but first it will destroy you.",
+    "To be rational, one must acknowledge the limits of reason.",
+    "The only constant is change, yet we cling to permanence.",
+    "We seek meaning in a universe indifferent to our existence."
+  ]
+}
