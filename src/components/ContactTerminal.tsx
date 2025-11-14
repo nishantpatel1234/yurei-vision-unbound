@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Mail, Github, Twitter, Linkedin, Instagram } from "lucide-react";
 
+// Update these with your actual social media links
 const socialLinks = [
-  { icon: Mail, label: "Email", href: "mailto:yurei@example.com", color: "#00ffff" },
-  { icon: Github, label: "GitHub", href: "https://github.com", color: "#ff00ff" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com", color: "#00ffaa" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", color: "#ffaa00" },
-  { icon: Instagram, label: "Instagram", href: "https://instagram.com", color: "#ff3366" },
+  { icon: Mail, label: "Email", href: "mailto:yureisavage@gmail.com", color: "#00ffff" },
+  { icon: Github, label: "GitHub", href: "https://github.com/yureisavage", color: "#ff00ff" },
+  { icon: Twitter, label: "Twitter/X", href: "https://x.com/yureisavage", color: "#00ffaa" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/yureisavage", color: "#ffaa00" },
+  { icon: Instagram, label: "Instagram", href: "https://instagram.com/yureisavage", color: "#ff3366" },
 ];
 
 const ContactTerminal = () => {
