@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Float, Text3D, Center } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const skills = [
   {
@@ -65,6 +66,15 @@ const SkillNode = ({ skill, onClick }: { skill: typeof skills[0]; onClick: () =>
 
 const PolymathCore = () => {
   const [selectedSkill, setSelectedSkill] = useState<typeof skills[0] | null>(null);
+  const navigate = useNavigate();
+
+  const handleSkillClick = (skill: typeof skills[0]) => {
+    if (skill.name === "Philosophy") {
+      navigate("/philosophy");
+    } else {
+      setSelectedSkill(skill);
+    }
+  };
 
   return (
     <section className="min-h-screen relative bg-gradient-to-b from-background to-card py-20">
@@ -96,7 +106,7 @@ const PolymathCore = () => {
                 <SkillNode
                   key={index}
                   skill={skill}
-                  onClick={() => setSelectedSkill(skill)}
+                  onClick={() => handleSkillClick(skill)}
                 />
               ))}
               
