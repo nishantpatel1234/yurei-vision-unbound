@@ -10,36 +10,42 @@ const skills = [
     position: [2, 1, 0] as [number, number, number],
     color: "#00ffff",
     description: "Cinematic storytelling through motion and rhythm",
+    route: "/video-editing",
   },
   {
     name: "Design",
     position: [-2, 1, 0] as [number, number, number],
     color: "#ff00ff",
     description: "Visual systems that blend form and function",
+    route: "/design",
   },
   {
     name: "Philosophy",
     position: [0, 2, -2] as [number, number, number],
     color: "#00ffaa",
     description: "Exploring the nature of creativity and consciousness",
+    route: "/philosophy",
   },
   {
     name: "AI Projects",
     position: [1.5, -1, 1] as [number, number, number],
     color: "#ffaa00",
     description: "Building intelligent systems and creative tools",
+    route: "/ai-projects",
   },
   {
     name: "Fitness",
     position: [-1.5, -1, 1] as [number, number, number],
     color: "#ff3366",
     description: "Discipline of body and mind through strength",
+    route: "/fitness",
   },
   {
     name: "Japan",
     position: [0, 0, 2] as [number, number, number],
     color: "#ff6699",
     description: "Culture, aesthetics, and the art of refinement",
+    route: "/japan",
   },
 ];
 
@@ -69,11 +75,7 @@ const PolymathCore = () => {
   const navigate = useNavigate();
 
   const handleSkillClick = (skill: typeof skills[0]) => {
-    if (skill.name === "Philosophy") {
-      navigate("/philosophy");
-    } else {
-      setSelectedSkill(skill);
-    }
+    navigate(skill.route);
   };
 
   return (
@@ -89,8 +91,11 @@ const PolymathCore = () => {
           <h2 className="text-5xl md:text-7xl font-bold mb-4 glow-cyan" style={{ fontFamily: "Orbitron, sans-serif" }}>
             THE POLYMATH CORE
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground mb-4">
             Explore the interconnected nodes of knowledge and creation
+          </p>
+          <p className="text-sm text-primary/60 animate-pulse">
+            Click any node to enter its dimension →
           </p>
         </motion.div>
 
@@ -139,49 +144,35 @@ const PolymathCore = () => {
 
           {/* Skill Details */}
           <div className="space-y-6">
-            {selectedSkill ? (
-              <motion.div
-                key={selectedSkill.name}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="holographic p-8 rounded-lg space-y-4"
-              >
-                <h3
-                  className="text-3xl font-bold"
-                  style={{ color: selectedSkill.color, textShadow: `0 0 20px ${selectedSkill.color}` }}
-                >
-                  {selectedSkill.name}
-                </h3>
-                <p className="text-lg text-foreground/80">{selectedSkill.description}</p>
-                <button
-                  onClick={() => setSelectedSkill(null)}
-                  className="text-primary hover:text-primary-glow transition-colors"
-                >
-                  ← Back to map
-                </button>
-              </motion.div>
-            ) : (
-              <div className="space-y-4">
-                <p className="text-lg text-muted-foreground">
-                  Click on any node to explore a discipline
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {skills.map((skill, index) => (
-                    <motion.button
-                      key={index}
-                      onClick={() => setSelectedSkill(skill)}
-                      className="p-4 border border-primary/30 rounded-lg hover:border-primary transition-all hover:bg-card/50"
-                      whileHover={{ scale: 1.05 }}
-                      style={{
-                        boxShadow: `0 0 20px ${skill.color}20`,
-                      }}
+            <div className="holographic p-8 rounded-lg space-y-6">
+              <h3 className="text-2xl font-bold text-primary mb-4">Navigation Guide</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Each glowing node represents a discipline. Click to dive deeper into that realm.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {skills.map((skill, index) => (
+                  <motion.button
+                    key={index}
+                    onClick={() => handleSkillClick(skill)}
+                    className="p-4 border border-primary/30 rounded-lg hover:border-primary transition-all hover:bg-card/50 group"
+                    whileHover={{ scale: 1.05 }}
+                    style={{
+                      boxShadow: `0 0 20px ${skill.color}20`,
+                    }}
+                  >
+                    <span 
+                      style={{ color: skill.color }}
+                      className="font-semibold group-hover:drop-shadow-lg transition-all"
                     >
-                      <span style={{ color: skill.color }}>{skill.name}</span>
-                    </motion.button>
-                  ))}
-                </div>
+                      {skill.name}
+                    </span>
+                    <p className="text-xs text-muted-foreground mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      Click to explore →
+                    </p>
+                  </motion.button>
+                ))}
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
